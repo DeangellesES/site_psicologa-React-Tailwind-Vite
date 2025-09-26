@@ -2,6 +2,8 @@ import { FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 import simPsicologia from "./assets/simbolo.png"
 
+import { Link } from "react-router-dom";
+
 function Rodape() {
     return (
         <footer className="flex bg-gradient-to-r from-violet-400 to-pink-100 justify-around items-center h-100">
@@ -18,12 +20,12 @@ function Rodape() {
                 <p className="text-cyan-900 text-center mt-15">© 2025 Todos os direitos reservados à Psicóloga Patrícia | Criado por Felipe</p>
             </div>
             <div className="flex flex-col gap-2 text-center w-35">
-                <a href="" className="text-xl bg-sky-800 w-28 text-stone-50 rounded-md p-1">Home</a>
-                <a href="" className="text-xl bg-sky-800 w-28 text-stone-50 rounded-md p-1">Sobre mim</a>
+                <Link to="/" href="" className="text-xl bg-sky-800 w-28 text-stone-50 rounded-md p-1 hover:scale-125">Home</Link>
+                <Link to="/sobre" href="" className="text-xl bg-sky-800 w-28 text-stone-50 rounded-md p-1 hover:scale-125">Sobre mim</Link>
                 <div className="flex gap-4">
-                    <FaWhatsapp className="text-4xl bg-lime-600 text-stone-50 rounded-md p-1" />
-                    <FaLinkedinIn className="text-4xl bg-sky-800 text-stone-50 rounded-md p-1" />
-                    <FaInstagram className="text-4xl bg-red-400 text-stone-50 rounded-md p-1" />
+                    <FaWhatsapp className="text-4xl bg-lime-600 text-stone-50 rounded-md p-1 cursor-pointer hover:scale-125" />
+                    <FaLinkedinIn className="text-4xl bg-sky-800 text-stone-50 rounded-md p-1 cursor-pointer hover:scale-125" />
+                    <FaInstagram className="text-4xl bg-red-400 text-stone-50 rounded-md p-1 cursor-pointer hover:scale-125" />
                 </div>
             </div>
         </footer>

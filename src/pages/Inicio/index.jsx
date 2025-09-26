@@ -3,6 +3,8 @@ import online from "./assets/online.jpg"
 import casal from "./assets/casal.jpg"
 import terapia from "./assets/terapia.jpg"
 import homemCaminhando from "./assets/caminhando.jpg"
+import criancaTerapia from "./assets/criancaTerapia.jpg"
+import cansada from "./assets/cansada.jpg"
 
 import Cabecalho from "../../Components/Header";
 import Rodape from "../../Components/Rodape";
@@ -26,13 +28,13 @@ function Inicio() {
                 <div>
                     <h1 className="text-7xl w-160 text-center text-cyan-900 font-semibold mb-6">Psicóloga Clínica & Organizacional</h1>
                     <h3 className="text-2xl text-center text-cyan-900 font-semibold mb-20">Especialista em comportamento e Neurociências</h3>
-                    <a href="" className="text-2xl text-red-50 mb-6 bg-sky-800 rounded-2xl p-2 ml-55">Entre em contato</a>
+                    <a href="" className="text-2xl text-red-50 mb-6 bg-sky-800 rounded-2xl p-2 pb-3 ml-55 hover:bg-sky-500">Entre em contato</a>
                 </div>
 
                 <div className="flex gap-4 ml-210">
-                    <FaWhatsapp className="text-5xl bg-lime-600 text-stone-50 rounded-xl p-1" />
-                    <FaLinkedinIn className="text-5xl bg-sky-800 text-stone-50 rounded-xl p-1" />
-                    <FaInstagram className="text-5xl bg-red-400 text-stone-50 rounded-xl p-1" />
+                    <FaWhatsapp className="text-5xl bg-lime-600 text-stone-50 rounded-xl p-1 cursor-pointer hover:scale-135" />
+                    <FaLinkedinIn className="text-5xl bg-sky-800 text-stone-50 rounded-xl p-1 cursor-pointer hover:scale-135" />
+                    <FaInstagram className="text-5xl bg-red-400 text-stone-50 rounded-xl p-1 cursor-pointer hover:scale-135" />
                 </div>
             </section>
             {/* FIM SEÇAO TOPO */}
@@ -44,7 +46,7 @@ function Inicio() {
                     <p className="text-2xl w-130 text-justify mb-10 text-stone-700">Psicóloga formada pela universidade ficticia e atuo com foco em saúde mental, desenvolvimento pessoal, relacionamentos e autoconhecimento. Tenho experiência no atendimento a adolescentes, adultos e idosos, utilizando uma abordagem cognitivo-comportamental, psicanalítica, humanista para promover o bem-estar emocional e auxiliar meus pacientes em seus processos de transformação e crescimento.
                         Acredito em um atendimento empático, ético e personalizado, respeitando sempre a individualidade de cada pessoa. Estou aqui para te ajudar a lidar com desafios, encontrar novos caminhos e fortalecer sua saúde mental.
                         Seja bem-vindo(a)!</p>
-                    <a href="" className="bg-cyan-900 text-red-50 py-1 px-4 text-2xl rounded-xl pb-2">Saiba mais</a>
+                    <a href="" className="bg-cyan-900 text-red-50 py-1 px-4 text-2xl rounded-xl pb-2 hover:scale-125 hover:opacity-40">Saiba mais</a>
                 </div>
                 <div className="flex bg-cyan-900 ">
                     <img className="p-20" src={psciologa} alt="" />
@@ -81,7 +83,7 @@ function Inicio() {
                     <div className="w-150 p-7 shadow-[0_15px_15px_rgba(0,0,0,0.35)] rounded-3xl h-fit">
                         <h1 className="text-2xl text-cyan-900 ml-20 mb-2 rounded-3xl">Terapia ABA</h1>
                         <div className="flex gap-7">
-                            <img src={online} alt="" className="w-60 h-60 rounded-3xl" />
+                            <img src={criancaTerapia} alt="" className="w-60 h-60 rounded-3xl" />
                             <p className="text-justify">A Terapia ABA (Applied Behavior Analysis) é uma abordagem científica baseada nos princípios da aprendizagem e do comportamento, frequentemente utilizada para ajudar pessoas com Transtorno do Espectro Autista (TEA) e outras condições do desenvolvimento. Com o objetivo de : Ensinar habilidades (comunicação, socialização, autonomia). Redução de comportamentos desafiadores ( agressividade, autoestimulação excessiva, birras). Usar reforço positivo para motivar a aprendizagem.</p>
                         </div>
                     </div>
@@ -90,32 +92,41 @@ function Inicio() {
             {/* FIM SEÇÃO ATENDIMENTO */}
 
             {/* INICIO SEÇÃO SAIBA MAIS */}
-            <section>
-                <h1>Saiba mais!</h1>
+            <section className="bg-cyan-900 p-6">
+                <h1 className="text-6xl text-center text-red-50">Saiba mais!</h1>
                 <Swiper
                     modules={[Navigation, Pagination, Scrollbar, A11y]}
                     spaceBetween={50}
                     slidesPerView={1}
                     loop={true}
                     navigation
-                    pagination={{ clickable: true }}
+                    // pagination={{ clickable: true }}
                     // scrollbar={{ draggable: true }}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
                 >
                     <SwiperSlide>
-                        <div className="flex justify-center">
-                            <div className="w-100">
-                                <h1 className="text-3xl text-center">Quando devemos procurar um psicólogo?</h1>
-                                <img src={homemCaminhando} alt="" className="w-80 h-100" />
-                                <p>No mundo agitado de hoje, onde o estresse e as pressões são constantes, cuidar da saúde mental tornou-se tão importante quanto cuidar da saúde física.
+                        <div className="w-screen flex justify-center items-center rounded-2xl p-13 pr-29">
+                            <div className="h-fit items-center w-140 flex flex-col gap-5 bg-red-50 p-13 z-0">
+                                <h1 className="text-3xl text-center text-cyan-900">Quando devemos procurar um psicólogo?</h1>
+                                <img src={homemCaminhando} alt="" className="w-80 h-100 rounded-xl" />
+                                <p className="w-full text-justify">No mundo agitado de hoje, onde o estresse e as pressões são constantes, cuidar da saúde mental tornou-se tão importante quanto cuidar da saúde física.
                                     Assim como é essencial conhecer primeiro socorros para as emergências físicas, é importante saber e entender quando procurar ajuda profissional para a saúde mental.</p>
-                                <a href="">Saiba mais</a>
+                                <a href="" className="bg-cyan-900 text-red-50 py-1 px-4 text-2xl rounded-xl hover:scale-125 hover:opacity-40 pb-2">Saiba mais</a>
                             </div>
                         </div>
-
                     </SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
+
+                    <SwiperSlide>
+                        <div className="w-screen flex justify-center items-center rounded-2xl p-13 pr-29">
+                            <div className="h-fit items-center w-140 flex flex-col gap-5 bg-red-50 p-13 z-0">
+                                <h1 className="text-3xl text-center text-cyan-900">Burnout: O que ninguém te conta</h1>
+                                <img src={cansada} alt="" className="w-80 h-100 rounded-xl" />
+                                <p className="w-full text-justify">Burnout não é só "cansado" – é um estado de esgotamento neurobiológico que pode levar a: Queda de testosterona (em homens e mulheres), afetando libido e energia. Envelhecimento celular acelerado (telômeros mais curtos = sinais precoces de envelhecimento). Disfunção imunológica (mais gripes, alergias e inflamações).</p>
+                                <a href="" className="bg-cyan-900 text-red-50 py-1 px-4 text-2xl rounded-xl hover:scale-125 hover:opacity-40 pb-2">Saiba mais</a>
+                            </div>
+                        </div>
+                    </SwiperSlide>
 
                 </Swiper>
             </section>
